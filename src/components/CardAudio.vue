@@ -1,63 +1,32 @@
 <script setup lang="ts">
-import { ref, watch, defineEmits, defineProps } from 'vue'
+import { ref, defineEmits, defineProps } from 'vue'
 import AudioButton from './icons/AudioButton.vue'
+import { useAudioPlayer } from '../composables/useAudioPlayer'
 
 const props = defineProps({
   id: { type: String, required: true },
   image: { type: String, required: false, default: '' },
-  texto: { type: String, required: true },
+  text: { type: String, required: true },
   audio: { type: String, required: true },
   play: { type: Boolean, required: false, default: false }
 })
-
 const emit = defineEmits(['update:play', 'audio-ended'])
-const isActive = ref(false)
 const audioElement = ref<HTMLAudioElement | null>(null)
+const { isActive, toggleAudio, onAudioEnd } = useAudioPlayer(
+  { play: props.play, id: props.id, audioElement },
+  emit
+)
 
-// Observa cambios en la prop play para iniciar o detener el audio
-watch(() => props.play, (newVal) => {
-  if (newVal && audioElement.value) {
-    audioElement.value.currentTime = 0
-    audioElement.value.play()
-    isActive.value = true
-  } else if (audioElement.value && !newVal) {
-    audioElement.value.pause()
-    isActive.value = false
-  }
-})
-
-// Función para alternar reproducción al hacer click en el botón
-const toggleAudio = () => {
-  if (!audioElement.value) return
-
-  if (isActive.value) {
-    audioElement.value.pause()
-    audioElement.value.currentTime = 0
-    isActive.value = false
-    emit('update:play', { id: props.id, value: false })
-  } else {
-    audioElement.value.play()
-    isActive.value = true
-    emit('update:play', { id: props.id, value: true })
-  }
-}
-
-// Función que se ejecuta cuando termina el audio
-const onAudioEnd = () => {
-  isActive.value = false
-  emit('update:play', { id: props.id, value: false }) // informar al padre que terminó
-  emit('audio-ended')
-}
 </script>
 
 <template>
   <div class="card" :class="{ 'card-active': isActive }">
     <div class="card-content">
-      <div class="image-wrapper" style="position: relative;">
-        <img :src="image" :alt="texto" class="card-image" />
+      <div class="image-card" style="position: relative;">
+        <img :src="image" :alt="text" class="card-image" />
         <AudioButton :isPlaying="isActive" @toggle="toggleAudio" />
       </div>
-      <p class="card-text">{{ texto }}</p>
+      <p class="card-text">{{ text }}</p>
     </div>
     <audio ref="audioElement" :src="audio" preload="auto" @ended="onAudioEnd" />
   </div>
@@ -77,7 +46,6 @@ const onAudioEnd = () => {
 }
 
 .card:hover {
-  //transform: translateY(-5px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
@@ -99,39 +67,6 @@ const onAudioEnd = () => {
   color: #2c3e50;
 }
 
-.audio-button {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background: rgba(255, 255, 255, 0.9);
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-.audio-button:hover {
-  transform: scale(1.1);
-  background: #42b983;
-  color: white;
-}
-
-.audio-button.playing {
-  background: #42b983;
-  color: white;
-  animation: pulse 2s infinite;
-}
-
-.audio-icon {
-  width: 24px;
-  height: 24px;
-}
 
 @keyframes pulse {
   0% {

@@ -1,0 +1,59 @@
+[
+  {
+    "id": "Tigre",
+    "image": "/src/assets/images/tigre.jpg",
+    "text": "Sonidos del tigre",
+    "audio": "/src/assets/audio/atigre.mp3",
+    "description": "El tigre es el felino más grande del mundo y se destaca por su hermoso pelaje anaranjado con rayas negras. Este impresionante depredador es solitario y sigiloso, capaz de acechar a sus presas en junglas y bosques. Su rugido puede escucharse a varios kilómetros de distancia."
+  },
+  {
+    "id": "Elefante",
+    "image": "/src/assets/images/elefante.jpg",
+    "text": "Sonidos del elefante",
+    "audio": "/src/assets/audio/elephant-scream-106989.mp3",
+    "description": "El elefante es el animal terrestre más grande del planeta, conocido por su gran tamaño, sus colmillos de marfil y su trompa versátil. Es un animal social que vive en manadas y se comunica a través de sonidos de baja frecuencia, inaudibles para los humanos en ocasiones."
+  },
+  {
+    "id": "Guacamaya",
+    "image": "/src/assets/images/Guacamaya.jpg",
+    "text": "Sonidos del guacamaya",
+    "audio": "/src/assets/audio/birds-kea-105461.mp3",
+    "description": "La guacamaya es una de las aves más coloridas y llamativas de la selva tropical. Su plumaje mezcla tonos rojos, azules, verdes y amarillos, y es famosa por su potente voz y su capacidad de imitar sonidos y palabras. Vive en bandadas y vuela grandes distancias en busca de frutos y semillas."
+  },
+  {
+    "id": "Delfin",
+    "image": "/src/assets/images/hermoso-delfin-nadando.jpg",
+    "text": "Sonidos del delfin",
+    "audio": "/src/assets/audio/delfin.mp3",
+    "description": "El delfín es un mamífero marino conocido por su inteligencia, sociabilidad y habilidad para realizar saltos y acrobacias en el agua. Utiliza sonidos y silbidos para comunicarse con otros miembros de su grupo y es reconocido por ayudar a los humanos en diferentes ocasiones."
+  },
+  {
+    "id": "Tigre2",
+    "image": "/src/assets/images/tigre.jpg",
+    "text": "Sonidos del tigre",
+    "audio": "/src/assets/audio/atigre.mp3",
+    "description": "El tigre es el felino más grande del mundo y se destaca por su hermoso pelaje anaranjado con rayas negras. Este impresionante depredador es solitario y sigiloso, capaz de acechar a sus presas en junglas y bosques. Su rugido puede escucharse a varios kilómetros de distancia."
+  },
+  {
+    "id": "Elefante2",
+    "image": "/src/assets/images/elefante.jpg",
+    "text": "Sonidos del elefante",
+    "audio": "/src/assets/audio/elephant-scream-106989.mp3",
+    "description": "El elefante es el animal terrestre más grande del planeta, conocido por su gran tamaño, sus colmillos de marfil y su trompa versátil. Es un animal social que vive en manadas y se comunica a través de sonidos de baja frecuencia, inaudibles para los humanos en ocasiones."
+  },
+  {
+    "id": "Guacamaya2",
+    "image": "/src/assets/images/Guacamaya.jpg",
+    "text": "Sonidos de la Guacamaya",
+    "audio": "/src/assets/audio/birds-kea-105461.mp3",
+    "description": "La guacamaya es una de las aves más coloridas y llamativas de la selva tropical. Su plumaje mezcla tonos rojos, azules, verdes y amarillos, y es famosa por su potente voz y su capacidad de imitar sonidos y palabras. Vive en bandadas y vuela grandes distancias en busca de frutos y semillas."
+  },
+  {
+    "id": "Delfin2",
+    "image": "/src/assets/images/hermoso-delfin-nadando.jpg",
+    "text": "Sonidos del delfin",
+    "audio": "/src/assets/audio/delfin.mp3",
+    "description": "El delfín es un mamífero marino conocido por su inteligencia, sociabilidad y habilidad para realizar saltos y acrobacias en el agua. Utiliza sonidos y silbidos para comunicarse con otros miembros de su grupo y es reconocido por ayudar a los humanos en diferentes ocasiones."
+  }
+
+]

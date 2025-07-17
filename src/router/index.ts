@@ -1,19 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import Home from '@/views/Home.vue'
+import DetalleCard from '@/views/DetalleCard.vue'
+import NotFound from '@/views/NotFound.vue'
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: () => import('../views/HomeView.vue'),
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: () => import('../views/AboutView.vue'),
-    },
-  ],
+const routes = [
+  { path: '/', component: Home },
+  { path: '/detalle/:id', component: DetalleCard },
+  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
+]
+
+export default createRouter({
+  history: createWebHistory(),
+  routes,
 })
-
-export default router
