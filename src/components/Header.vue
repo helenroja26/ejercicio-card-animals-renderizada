@@ -16,7 +16,7 @@
 <style scoped>
 .app-header {
   width: 100vw;
-  height: 80px;
+  height: 70px;
   background: #2c3e50;
   color: white;
   display:flex;
