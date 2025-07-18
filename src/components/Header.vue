@@ -15,11 +15,11 @@
 
 <style scoped>
 .app-header {
-  width: 100%;
+  width: 100vw;
   height: 80px;
   background: #2c3e50;
   color: white;
-  display: grid;
+  display:flex;
   grid-template-columns: repeat(8, 1fr);
   align-items: center;
   padding-left: 1rem;
@@ -31,7 +31,7 @@
 }
 .logo-link {
   display: flex;
-  align-items: center;
+  align-ittems: center;
   gap: 1rem;
 }
 

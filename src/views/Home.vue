@@ -54,7 +54,6 @@ function handleAudioEnd(id: string) {
 @media (max-width: 1100px) {
   .cards-grid {
     grid-template-columns: repeat(2, 2fr);
-    max-width: 98vw;
     padding-top: 80px;
     padding-bottom: 50px;
     max-width: 95vw;

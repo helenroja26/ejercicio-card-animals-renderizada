@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import cardsData from '@/data/cards.json'
-import Header from '@/components/icons/Header.vue'
-import Footer from '@/components/icons/Footer.vue'
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
 const activeId = ref<string | null>(null)
 
 function handleUpdatePlay(payload: { id: string, value: boolean }) {
