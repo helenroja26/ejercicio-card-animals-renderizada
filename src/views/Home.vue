@@ -42,20 +42,18 @@ function handleAudioEnd(id: string) {
   grid-template-columns: repeat(4, 1fr);
   padding: 3.5rem;
   gap: 3.5rem;
+  text-align: center;
 }
 .card-title {
   font-size: 1rem;
-  font-weight: bold;
   color: #42b983;
   gap: 2rem;
-  text-align: center;
   letter-spacing: 0.03em;
 }
 @media (max-width: 1100px) {
   .cards-grid {
-    grid-template-columns: repeat(2, 2fr);
-    padding-top: 80px;
-    padding-bottom: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 80px 50px;
     max-width: 95vw;
   }
 }
@@ -63,9 +61,7 @@ function handleAudioEnd(id: string) {
   .cards-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
-    padding: 1rem 0;
-    padding-top: 80px;
-    padding-bottom: 50px;
+    padding-top: 80px 50px;
     max-width: 95vw;
   }
 }

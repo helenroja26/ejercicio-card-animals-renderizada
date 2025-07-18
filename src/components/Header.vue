@@ -15,10 +15,9 @@
 
 <style scoped>
 .app-header {
-  width: 100vw;
+  width: 100%;
   height: 70px;
   background: #2c3e50;
-  color: white;
   display:flex;
   grid-template-columns: repeat(8, 1fr);
   align-items: center;
@@ -27,11 +26,9 @@
   top: 0;
   left: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 .logo-link {
   display: flex;
-  align-ittems: center;
   gap: 1rem;
 }
 
